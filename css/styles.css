@@ -1,0 +1,256 @@
+
+/******CSS Reset******/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+html {
+    font-size: 16px;
+    font-family: "Raleway";
+    text-shadow: 1px 1px 1px black;
+}
+
+/******Colors******/
+
+:root {
+    --main: #0F0F0F;
+    --card: #1C1C1C;
+    --title: #D3D3D3;
+    --text: #A0A0A0;
+    --highlights: #FF9800;
+}
+
+/******Base Styles******/
+
+input[type="checkbox"] {
+  accent-color: var(--highlights);
+}
+
+
+button {
+    transition: transform .4s;
+}
+
+svg {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+textarea:focus {
+    outline: 1px solid var(--highlights);
+}
+
+header {
+    width: 100vw;
+    height: 8vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--card);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+header h1 {
+    color: var(--highlights);
+    font-weight: 300;
+    font-size: 1.6rem;
+}
+
+header button {
+    position: absolute;
+    right: 5vw;
+}
+
+main {
+    width: 100vw;
+    height: 84vh;
+    position: fixed;
+    top: 8vh;
+    left: 0;
+    background-color: var(--main);
+}
+
+/******Main-Screen******/
+
+#MainScreen, #NewNotesScreen {
+    width: 100vw;
+    height: 84vh;
+    position: fixed;
+    top: 8vh;
+    left: 0;
+    transition: transform .4s;
+}
+
+#MainScreen button {
+    width: 13rem;
+    height: 3rem;
+    background-color: var(--highlights);
+    color: var(--main);
+    font-size: 1.4rem;padding: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 2rem  auto 2rem auto;
+    box-shadow: rgba(255, 152, 0, 1) 0px 3px 8px;
+}
+
+.notes {
+    width: 100vw;
+    height: 84vh;
+    position: fixed;
+    left: 0;
+    overflow-y: scroll;
+    padding-bottom: 24vh;
+}
+
+.note {
+    width: 90vw;
+    height: 16vh;
+    background-color: var(--card);
+    margin: 2rem auto;
+    border-radius: 10px;
+    transition: all .4s;
+}
+
+.note.clicked {
+    height: 30vh;
+    overflow-y: scroll;
+    border: 1px solid var(--highlights);
+}
+
+.note.selected {
+    border: 1px solid var(--highlights);
+}
+
+.note:first-child {
+    margin-top: 0;
+}
+
+.note h2 {
+    font-size: 1.2rem;
+    color: var(--title);
+    padding: .6rem;
+}
+
+.note p {
+    color: var(--text);
+    padding: 0 .6rem .6rem .6rem;
+    height: 3.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.note p.expanded {
+    display: block;
+    height: auto;
+    overflow: visible;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: unset;
+    text-overflow: unset;
+    white-space: normal;
+    word-break: break-word;
+}
+
+/******NewNotes-Screen******/
+
+#NewNotesScreen {
+    overflow-y: scroll;
+}
+
+#NewNotesScreen * {
+    display: block;
+    margin: 2rem auto;
+}
+
+#NewNotesScreen label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--title);
+    font-size: 1.4rem;
+}
+
+#NewNotesScreen textarea {
+    width: 90vw;
+    background-color: var(--card);
+    border-radius: 10px;
+    font-size: 1.1rem;
+    color: var(--text);
+}
+
+#NewNotesScreen textarea:last-child {
+    min-height: 40vh;
+}
+
+/******Settings-Screen******/
+
+.settingsCard {
+    margin: 2rem auto;
+    background-color: var(--card);
+    width: 90vw;
+    height: 5vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    color: var(--title);
+}
+
+footer {
+    width: 100vw;
+    height: 8vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: var(--card);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+footer #CloseNoteBtn {
+    position: fixed;
+    left: 5vw;
+}
+
+footer #SaveNoteBtn {
+    position: fixed;
+    right: 5vw;
+}
+
+footer #DeleteBtn, footer #SaveBtn {
+    position: absolute;
+}
+
+footer #SaveNoteBtn svg {
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+button:active svg {
+    fill: var(--highlights);
+}
+
+.hidden {
+    transform: translateX(-150vw);
+}

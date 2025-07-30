@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoolNotes</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 id="Title">CoolNotes</h1>
+        <button id="SettingsBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960
+            960" width="24px" fill="#D3D3D3"><path
+            d="m370-80-16-128q-13-5-24.5-12T307-235l-119
+            50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8
+            23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7
+            1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24
+            12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41
+            39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99
+            42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5
+            23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68
+            99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0
+            99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5
+            41Zm-2-140Z"/></svg>
+        </button>
+        <button id="BackBtn" class="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960
+            960" width="24px" fill="#D3D3D3"><path d="M400-240 160-480l240-240 56
+            58-142 142h486v80H314l142 142-56 58Z"/></svg>
+        </button>
+    </header>
+    <main>
+        <div id="MainScreen">
+            <button id="NewNoteBtn">+ New Note</button>
+            <div class="notes">
+                
+            </div>
+        </div>
+        <div id="NewNotesScreen" class="hidden">
+            <label for="NoteTitle">Title:</label>
+            <textarea name="NoteTitle" id="NoteTitle" placeholder="Write here a title"></textarea>
+            <label for="Note">Note:</label>
+            <textarea name="Note" id="Note" placeholder="Write here a note"></textarea>
+        </div>
+        <div id="SettingsScreen" class="hidden">
+            <div class="settingsCard">
+                <label for="DeleteAllNotes">Delete All Notes</label>
+                <input type="checkbox" name="DeleteAllNotes" id="DeleteAllNotes">
+            </div>
+            <div class="settingsCard">
+                <label for="DarkMode">Dark Mode</label>
+                <input type="checkbox" name="DarkMode" id="DarkMode" checked>
+            </div>
+            <div class="settingsCard">
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <button id="DeleteBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960
+            960" width="24px" fill="#D3D3D3"><path d="M280-120q-33
+            0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5
+            56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360
+            m160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
+        </button>
+        <button id="CloseNoteBtn" class="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960
+            960" width="24px" fill="#D3D3D3"><path d="m256-200-56-56 224-224-224-224
+            56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+        </button>
+        <button id="SaveNoteBtn" class="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960
+            960" width="24px" fill="#D3D3D3"><path d="M400-304 240-464l56-56 104 104
+            264-264 56 56-320 320Z"/></svg>
+        </button>
+        <button id="SaveBtn" class="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960
+            960" width="24px" fill="#D3D3D3"><path d="M840-680v480q0 33-23.5
+            56.5T760-120H200q-33 0-56.5-23.5T120-200v-560q0-33
+            23.5-56.5T200-840h480l160 160Zm-80
+            34L646-760H200v560h560v-446ZM480-240q50 0
+            85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85
+            35ZM240-560h360v-160H240v160Zm-40-86v446-560 114Z"/></svg>
+        </button>
+    </footer>
+    <script src="./js/appcopy.js"></script>
+</body>
+</html>
