@@ -18,11 +18,20 @@ html {
 /******Colors******/
 
 :root {
+    /******Dark mode colors******/
     --main: #0F0F0F;
     --card: #1C1C1C;
     --title: #D3D3D3;
     --text: #A0A0A0;
     --highlights: #FF9800;
+}
+
+.lightMode {
+    /******Light mode colors******/
+    --main: #F9F9F9;
+    --card: #FFFFFF;
+    --title: #1C1C1C;
+    --text: #4A4A4A;
 }
 
 /******Base Styles******/
